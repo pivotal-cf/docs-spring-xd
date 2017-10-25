@@ -32,7 +32,7 @@ For more information on using Spring XD, access the [Getting Started Guide](http
 <dd><strong>Release Date</strong>: February 12, 2015</dd>
 <dd><strong>Software component version</strong>: Spring XD OSS 1.1.0</dd>
 <dd><strong>Compatible Ops Manager Version(s)</strong>: 1.3.x</dd>
-<dd><strong>Compatible Pivotal Application Service (PAS) Version(s)</strong>: 1.3.x</dd>
+<dd><strong>Compatible Elastic Runtime Version(s)</strong>: 1.3.x</dd>
 <dd><strong>vSphere support?</strong> Yes</dd>
 <dd><strong>AWS support?</strong> No</dd>
 </dl>
@@ -71,7 +71,7 @@ To create streams:
 
 1. Obtain the xd-admin endpoint IP address from one of the following:
     * In the Ops Manager Dashboard, click the Spring XD tile. Click the **Status** tab. Locate and copy the xd-admin endpoint IP address.
-    * In the PAS console, create a Spring XD service instance. Select the **Manage** link to access the Spring XD Dashboard, and copy an xd-admin endpoint IP address from the Spring XD Admin region.
+    * In the Elastic Runtime console, create a Spring XD service instance. Select the **Manage** link to access the Spring XD Dashboard, and copy an xd-admin endpoint IP address from the Spring XD Admin region.
 1. From a terminal window on your machine, open xd-shell.
 1. Run `admin config server [IP_ADDRESS]` to point the xd-shell to the xd-admin endpoint.
 
@@ -93,13 +93,13 @@ To create streams:
 
 This procedure assumes that you have done the following:
 
-* Successfully installed Spring XD, Pivotal HD and PAS to Ops Manager.
+* Successfully installed Spring XD, Pivotal HD and Elastic Runtime to Ops Manager.
 * Set the Spring XD containers to the same distribution value that the Hadoop cluster uses.
     Click the Spring XD tile and select **Settings**, then **Spring XD Containers**. Ensure that the **Hadoop Distribution** value matches the Hadoop cluster type that you will connect to in the xd-shell.
 
 To integrate Spring XD with Pivotal Hadoop for Cloud Foundry:
 
-1. In the PAS console, create a Pivotal HD service instance.
+1. In the Elastic Runtime console, create a Pivotal HD service instance.
 1. Click the **Manage** link to access the Pivotal HD Dashboard.
 1. Copy the NameNode URI from the **HDFS Address** field of the HDFS region.
 1. Start the xd-shell from your machine and point to the appropriate Hadoop name and distribution.
@@ -119,7 +119,7 @@ To integrate Spring XD with Pivotal Hadoop for Cloud Foundry:
     server-unknown:> hadoop fs chmod --mode 777 /xd
 </pre>
 
-1. In the PAS console, create a Spring XD service instance.
+1. In the Elastic Runtime console, create a Spring XD service instance.
 1. Click the **Manage** link of the instance to access the Spring XD Dashboard.
 1. Copy the `xd-admin` URI from the **Spring XD Admin** region.
 1. From a terminal window on your machine, open xd-shell.
